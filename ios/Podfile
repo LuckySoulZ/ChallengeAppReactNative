@@ -6,9 +6,11 @@ platform :ios, '11.0'
 
 target 'ChallengeRN' do
   use_unimodules!
+
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
+
 
   # Uncomment to opt-in to using Flipper
   #
@@ -18,4 +20,5 @@ target 'ChallengeRN' do
   #     flipper_post_install(installer)
   #   end
   # end
+
 end

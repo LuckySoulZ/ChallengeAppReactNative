@@ -8,5 +8,12 @@
     "assetBundlePatterns": [
       "**/*"
     ]
+  },
+  "ios": {
+    "supportsTablet": true,
+    "bundleIdentifier": "org.name.ChallengeRN",
+    "config": {
+      "googleMapsApiKey": "AIzaSyDT01W-3AnQ4t86S2Vi4qqEjZqHPOYTNYw"
+    }
   }
 }
