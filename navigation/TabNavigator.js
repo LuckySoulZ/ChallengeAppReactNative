@@ -9,7 +9,7 @@ import TabBarProvider from '../contexts/TabBarProvider';
 
 const Tab = createBottomTabNavigator();
 
-const TabNavigator = ({ navigation }) => {
+const TabNavigator = () => {
   return (
     <TabBarProvider>
         <Tab.Navigator tabBar={props => <TabBar {...props} />}>

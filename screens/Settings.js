@@ -2,7 +2,7 @@ import React from 'react';
 import { View, StyleSheet, Text, Button } from 'react-native';
 import { firebase } from '../config/Config';
 
-const Settings = ({ navigation }) => {
+const Settings = () => {
     const onFooterLinkPress = () => {
         firebase.auth().signOut();
     }

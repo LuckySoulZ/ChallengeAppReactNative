@@ -5,13 +5,6 @@ import FormButton from '../customcomponents/FormButton';
 import User from '../models/User';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const renderListItem = (itemData, index) => (
-  <View key={index} style={styles.listItem}>
-    <Text style={styles.lightgreen}>{itemData.name} </Text>
-    <Text style={styles.lightblue}>{itemData.email} </Text>
-  </View>
-);
-
 const LocalDB = () => {
   const [fullName, setFullName] = useState([])
   const [email, setEmail] = useState([])
@@ -53,6 +46,13 @@ const LocalDB = () => {
       alert(err);
     }
   }
+
+  const renderListItem = (itemData, index) => (
+    <View key={index} style={styles.listItem}>
+      <Text style={styles.lightgreen}>{itemData.name} </Text>
+      <Text style={styles.lightblue}>{itemData.email} </Text>
+    </View>
+  );
 
   /**
  * Se esta utilizando para que se corra una vez cuando inicia la applicacion y obtenga la informacion*.
@@ -105,7 +105,7 @@ const LocalDB = () => {
 
       {items.length > 0}
       <ScrollView contentContainerStyle={styles.listContainer}>
-        { items.map((item, index) => renderListItem(item, index))}
+        {items.map((item, index) => renderListItem(item, index))}
       </ScrollView>
 
     </View>
@@ -135,7 +135,6 @@ const styles = StyleSheet.create({
   listItem: {
     borderColor: '#ccc',
     borderWidth: 1,
-
     padding: 15,
     marginVertical: 10,
     backgroundColor: 'white',

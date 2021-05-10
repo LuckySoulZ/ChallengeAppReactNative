@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, StyleSheet, ScrollView } from 'react-native';
+import { ScrollView } from 'react-native';
 import { useTabBar } from '../contexts/TabBarProvider';
 
 let offsetY = 0;
@@ -19,9 +19,5 @@ const AnimatedScrollView = ({ children, ...restProps }) => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {},
-});
 
 export default AnimatedScrollView;

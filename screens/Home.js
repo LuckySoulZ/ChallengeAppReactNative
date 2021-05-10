@@ -88,7 +88,7 @@ const Home = () => {
           <Text style={styles.text}>FireStore Data</Text>
           <FlatList contentContainerStyle={styles.list}
             data={items}
-            keyExtractor={(_, index) => index}
+            keyExtractor={(_, index) => index.toString()}
             renderItem={({ item, index }) => renderListItem(item, items.length - index)}
             numColumns={1}
             initialNumToRender={0}
